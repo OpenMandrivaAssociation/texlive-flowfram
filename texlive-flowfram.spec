@@ -1,3 +1,9 @@
+# revision 16806
+# category Package
+# catalog-ctan /macros/latex/contrib/flowfram
+# catalog-date 2010-01-23 14:06:53 +0100
+# catalog-license lppl
+# catalog-version 1.13
 Name:		texlive-flowfram
 Version:	1.13
 Release:	1
@@ -64,6 +70,7 @@ two column layout.
 %doc %{_texmfdistdir}/source/latex/flowfram/flowfram.dtx
 %doc %{_texmfdistdir}/source/latex/flowfram/flowfram.ins
 %doc %{_texmfdistdir}/source/latex/flowfram/flowfram.perl
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -74,3 +81,5 @@ two column layout.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
