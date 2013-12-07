@@ -6,7 +6,7 @@
 # catalog-version 1.14
 Name:		texlive-flowfram
 Version:	1.14
-Release:	3
+Release:	4
 Summary:	Create text frames for posters, brochures or magazines
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/flowfram
