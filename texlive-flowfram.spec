@@ -1,13 +1,13 @@
 Name:		texlive-flowfram
-Version:	1.17
-Release:	3
+Version:	35291
+Release:	1
 Summary:	Create text frames for posters, brochures or magazines
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/flowfram
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/flowfram.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/flowfram.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/flowfram.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/flowfram.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/flowfram.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/flowfram.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -22,12 +22,12 @@ form of document that does not conform to the standard one or
 two column layout.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -39,7 +39,8 @@ two column layout.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
