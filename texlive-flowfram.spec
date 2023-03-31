@@ -1,6 +1,6 @@
 Name:		texlive-flowfram
 Version:	35291
-Release:	1
+Release:	2
 Summary:	Create text frames for posters, brochures or magazines
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/flowfram
